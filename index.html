@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Professor Alexandre Campos — Portfólio</title>
+<meta name="description" content="Portfólio de projetos em andamento do Professor Alexandre Campos — formação e informação em gestão pública." />
+<style>
+  :root {
+    --bg: #eef1ea;
+    --surface: #ffffff;
+    --ink: #16241d;
+    --muted: #56675c;
+    --line: #dce1d6;
+    --green: #2f5d49;
+    --green-soft: #e4ede7;
+    --ochre: #b0791f;
+    --ring: #2f5d49;
+    --shadow: 0 1px 2px rgba(22,36,29,.06), 0 8px 24px -12px rgba(22,36,29,.18);
+    --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1512;
+      --surface: #17211c;
+      --ink: #e8ede6;
+      --muted: #9caea2;
+      --line: #263029;
+      --green: #79b89a;
+      --green-soft: #1c2a23;
+      --ochre: #d7a64c;
+      --ring: #79b89a;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1512;
+    --surface: #17211c;
+    --ink: #e8ede6;
+    --muted: #9caea2;
+    --line: #263029;
+    --green: #79b89a;
+    --green-soft: #1c2a23;
+    --ochre: #d7a64c;
+    --ring: #79b89a;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.6);
+  }
+  :root[data-theme="light"] {
+    --bg: #eef1ea;
+    --surface: #ffffff;
+    --ink: #16241d;
+    --muted: #56675c;
+    --line: #dce1d6;
+    --green: #2f5d49;
+    --green-soft: #e4ede7;
+    --ochre: #b0791f;
+    --ring: #2f5d49;
+    --shadow: 0 1px 2px rgba(22,36,29,.06), 0 8px 24px -12px rgba(22,36,29,.18);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 6vw, 5.5rem) clamp(1.25rem, 5vw, 2rem) 3rem;
+  }
+
+  .eyebrow {
+    font-size: .72rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 1.6rem; height: 1px;
+    background: var(--ochre);
+    display: inline-block;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -.015em;
+    margin: 1.1rem 0 0;
+    text-wrap: balance;
+  }
+  .role {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+    color: var(--green);
+    margin: .7rem 0 0;
+  }
+  .intro {
+    max-width: 46ch;
+    color: var(--muted);
+    margin: 1.4rem 0 0;
+    font-size: 1.02rem;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: clamp(3rem, 8vw, 4.5rem) 0 1.25rem;
+    padding-bottom: .8rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .section-label h2 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: .01em;
+  }
+  .section-label span {
+    font-size: .78rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .cards { display: grid; gap: 1rem; }
+
+  .card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.5rem clamp(1.25rem, 4vw, 1.9rem);
+    box-shadow: var(--shadow);
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+  a.card:hover {
+    transform: translateY(-3px);
+    border-color: var(--green);
+    box-shadow: 0 2px 4px rgba(22,36,29,.08), 0 18px 40px -18px rgba(22,36,29,.30);
+  }
+  a.card:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .card h3 {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -.01em;
+  }
+  .card p {
+    color: var(--muted);
+    margin: .55rem 0 0;
+    font-size: .97rem;
+    max-width: 52ch;
+  }
+
+  .pill {
+    flex: none;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: .3rem .6rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .pill.ativo { color: var(--green); background: var(--green-soft); }
+  .pill.breve { color: var(--muted); background: transparent; border: 1px dashed var(--line); }
+
+  .go {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    margin-top: 1.15rem;
+    font-weight: 600;
+    font-size: .92rem;
+    color: var(--green);
+  }
+  .go svg { transition: transform .18s ease; }
+  a.card:hover .go svg { transform: translateX(3px); }
+
+  .card.soon { opacity: .8; }
+  .card.soon h3 { color: var(--muted); }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.2rem;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: .85rem;
+  }
+  footer a { color: var(--green); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (min-width: 620px) {
+    .cards { grid-template-columns: 1fr 1fr; }
+    .card.wide { grid-column: 1 / -1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <span class="eyebrow">Portfólio de Projetos em Andamento</span>
+    <h1>Professor Alexandre Campos</h1>
+    <p class="role">Formação e Informação em Gestão Pública</p>
+    <p class="intro">Aqui reúno as plataformas e projetos em que atuo. Escolha um para começar.</p>
+  </header>
+
+  <section aria-labelledby="proj">
+    <div class="section-label">
+      <h2 id="proj">Projetos</h2>
+      <span>1 ativo</span>
+    </div>
+
+    <div class="cards">
+      <a class="card wide" href="https://pmaf.professoralexandre.com">
+        <div class="card-top">
+          <h3>Plataforma PMAF</h3>
+          <span class="pill ativo">Ativo</span>
+        </div>
+        <p>Acompanhamento dos Planos Municipais de Agricultura Familiar de Mato Grosso: mapa por região, documentos e status de cada município.</p>
+        <span class="go">Acessar
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <div class="card soon">
+        <div class="card-top">
+          <h3>Novo projeto</h3>
+          <span class="pill breve">Em breve</span>
+        </div>
+        <p>Mais um projeto ganha espaço por aqui em breve.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Professor Alexandre Campos</span>
+    <span>professoralexandre.com</span>
+  </footer>
+</main>
+</body>
+</html>
